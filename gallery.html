@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container6" style="margin-top: 30px;"><br>
+        <h1 style="text-align: center;">GALLERY</h1><br><br>
+        
+        <div class="content-center">
+        <div class="content-center-gallery"><br><br>
+
+    </div>
+         
+            <div class="content"><br><br><br><br>
+            
+               <div class="image-container">
+               
+                    <div class="slider"><br><br><br><br><br><br><br><br><br><br><br><br>
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <input type="radio" name="slider" id="slide5">
+                <input type="radio" name="slider" id="slide6">
+                <div class="slides">
+                    <div class="slide" id="img1">
+                        <img src="{{ url_for('static', filename='images/img1.jpg') }}" alt="Heart Image 1" class="heart-image">
+                    </div>
+                    <div class="slide" id="img2">
+                        <img src="{{ url_for('static', filename='images/img2.jpg') }}" alt="Heart Image 2" class="heart-image">
+                    </div>
+                    <div class="slide" id="img3">
+                        <img src="{{ url_for('static', filename='images/img3.jpg') }}" alt="Heart Image 3" class="heart-image">
+                    </div>
+                    <div class="slide" id="img4">
+                        <img src="{{ url_for('static', filename='images/img4.jpg') }}" alt="Heart Image 4" class="heart-image">
+                    </div>
+                    <div class="slide" id="img5">
+                        <img src="{{ url_for('static', filename='images/img5.jpg') }}" alt="Heart Image 5" class="heart-image">
+                    </div>
+                    <div class="slide" id="img6">
+                        <img src="{{ url_for('static', filename='images/img6.jpg') }}" alt="Heart Image 6" class="heart-image">
+                    </div><br>
+                </div></div>
+                </div><hr><br><br>
+                 <div class="amazon-links">
+        <br><h2 style="text-align: center;">♥ Heart Disease Tablets on Amazon ♥</h2><br><br>
+            <div class="center-images">
+                <div class="slide1" id="medicine1">
+                    <img src="{{ url_for('static', filename='images/medicine1.jpg') }}" alt="Heart Image 1" class="heart-image">
+                </div>
+            <div class="slide1" id="medicine2">
+                <center><img src="{{ url_for('static', filename='images/medicine2.jpg') }}" alt="Heart Image 1" class="heart-image"></center>
+            </div><br><br>
+            </div>
+        <div class="amazon-link"><br>
+            <a href="https://www.amazon.com/s?k=heart+disease+tablets" target="_blank" class="btn btn-primary">Whole products</a>
+        </div>
+        </div>   
+                <div class="navigation">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                    <label for="slide5"></label>
+                    <label for="slide6"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-buttons">
+            <center><a href="{{ url_for('home') }}" class="btn1 btn-back">Back to Home Page</a></center>
+        </div>
+        
+    <br><br><br>
+    <footer>
+            <p><b>&copy; 2024 Heart Disease Prediction. All rights reserved.</b></p>
+        </footer><br><br>
+</body>
+</html>
+
+<style>
+/* CSS */
+.container6 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px;
+    background: #fff;
+    border-radius: 48px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 170px;
+}
+.content-center-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 0px;/* Adjust the margin-top as needed */
+}
+.image-container {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 300px;
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.33% - 50px); /* Adjust width as needed for responsiveness */
+}
+
+.gallery-item img {
+    width: 200%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.caption {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+.slider {
+    width: auto; /* Set width to auto to fit the content */
+    max-width: 100%; /* Limit the width to the container's width */
+    margin: 25px; /* Remove any margin */
+    padding: 50px; /* Remove any padding */
+    overflow: y auto; /* Hide any overflow */
+    border-radius: 10px;
+}
+
+.slide {
+    width: 55%;
+    flex: 1 0 60%;
+}
+
+.slide1 {
+    width: 90%;
+    flex: 1 0 60%;
+}
+.slide img {
+    width: 80%;
+    display: block;
+}
+
+.slides {
+    display: inline-flex; /* Display slides as inline flex */
+    width: 600px; /* Adjust width as per content */
+    transition: transform 0.5s ease-in-out;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 600px;
+}
+
+.navigation label {
+    cursor: pointer;
+    width: 12px;
+    height: 6px;
+    margin: 20px;
+
+}
+
+
+</style>
